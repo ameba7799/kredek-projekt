@@ -1,9 +1,10 @@
-using System;
+
 
 namespace Animation { 
 
     public class Main {
-        //private static Animate animate;
+
+        private static Animate animateObject;
     
         public static void main () {
         instructions:
@@ -17,7 +18,7 @@ namespace Animation {
                 int a = Convert.ToInt32(answer);
                 switch (a) {
                 case 1:
-                    //animate = new SnowFlakes();
+                    animateObject = new SnowFlakes();
                     Console.WriteLine("Œnierzynki");
                     break;
                 //...
@@ -29,11 +30,13 @@ namespace Animation {
                 Console.WriteLine("***************************************************************************");
                 goto instructions;
             }
+
+            
+            animateObject.animate();
         }
 
         private class WrongOptionException : Exception {
             public WrongOptionException () : base("wybrano z³¹ opcje") { }
         }
-
     }
 }
