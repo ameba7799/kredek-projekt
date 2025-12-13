@@ -1,5 +1,4 @@
-using System;
-using System.Threading;
+
 
 namespace Animation {
 
@@ -12,7 +11,7 @@ namespace Animation {
             }
         } 
 
-        public abstract void nextFrame ();
+        protected abstract void nextFrame ();
 
     }
 }
