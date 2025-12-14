@@ -18,7 +18,7 @@ namespace Animation {
                 int a = Convert.ToInt32(answer);
                 switch (a) {
                 case 1:
-                    animateObject = new SnowFlakes();
+                    animateObject = new SnowFlakesAnimation();
                     Console.WriteLine("Œnierzynki");
                     break;
                 //...

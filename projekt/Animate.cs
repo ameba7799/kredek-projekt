@@ -6,12 +6,13 @@ namespace Animation {
 
         public void animate () {
             while (true) {
-                nextFrame();
+                Console.Clear();
+                Console.Write(nextFrame());
                 Thread.Sleep(100);
             }
         } 
 
-        protected abstract void nextFrame ();
+        protected abstract string nextFrame ();
 
     }
 }
