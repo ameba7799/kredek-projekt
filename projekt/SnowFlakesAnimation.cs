@@ -8,10 +8,10 @@ namespace Animation {
         private Queue<string> frameParts;
 
         public SnowFlakesAnimation () {
-            frameParts = new Queue<string>(32);
+            frameParts = new Queue<string>(50);
             flakes = new SnowFlakes();
 
-            for (int i = 0; i < 32; i++) {
+            for (int i = 0; i < 50; i++) {
                 frameParts.Enqueue("");
             }
         }

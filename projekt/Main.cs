@@ -10,6 +10,7 @@ namespace Animation {
         instructions:
             Console.WriteLine("Wybierz animacje:");
             Console.WriteLine("1 - œnierzynki");
+            Console.WriteLine("2 - kot");
             //...
 
             string answer = Console.ReadLine();
@@ -19,7 +20,9 @@ namespace Animation {
                 switch (a) {
                 case 1:
                     animateObject = new SnowFlakesAnimation();
-                    Console.WriteLine("Œnierzynki");
+                    break;
+                case 2:
+                    animateObject = new CatAnimation();
                     break;
                 //...
                 default:
