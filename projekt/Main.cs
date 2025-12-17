@@ -11,8 +11,6 @@ namespace Animation {
             Console.WriteLine("Wybierz animacje:");
             Console.WriteLine((int) Options.SNOW + " - " + Options.SNOW.description());
             Console.WriteLine((int) Options.CAT + " - " + Options.CAT.description());
-//            Console.WriteLine("3 - Nasionko")
-            //...
 
             string answer = Console.ReadLine();
 
@@ -24,10 +22,6 @@ namespace Animation {
                 case Options.CAT:
                     animateObject = new CatAnimation();
                     break;
-//                case 3:
-//                    animateObject = new PlantAnimation();
-//                    break;
-                //...
                 default:
                     throw new WrongOptionException();
                 }
@@ -55,9 +49,9 @@ namespace Animation {
         public static string description (this Options option) {
             switch (option) {
             case Options.SNOW:
-                return "Pada œnieg";
+                return "* Pada œnieg *";
             case Options.CAT:
-                return "Kotek";
+                return "Kotek =^.^=";
             default:
                 return "";
             }
