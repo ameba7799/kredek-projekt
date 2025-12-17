@@ -9,21 +9,24 @@ namespace Animation {
         public static void main () {
         instructions:
             Console.WriteLine("Wybierz animacje:");
-            Console.WriteLine("1 - œnierzynki");
-            Console.WriteLine("2 - kot");
+            Console.WriteLine((int) Options.SNOW + " - " + Options.SNOW.description());
+            Console.WriteLine((int) Options.CAT + " - " + Options.CAT.description());
+//            Console.WriteLine("3 - Nasionko")
             //...
 
             string answer = Console.ReadLine();
 
             try {
-                int a = Convert.ToInt32(answer);
-                switch (a) {
-                case 1:
+                switch (Enum.Parse(typeof(Options), answer)) {
+                case Options.SNOW:
                     animateObject = new SnowFlakesAnimation();
                     break;
-                case 2:
+                case Options.CAT:
                     animateObject = new CatAnimation();
                     break;
+//                case 3:
+//                    animateObject = new PlantAnimation();
+//                    break;
                 //...
                 default:
                     throw new WrongOptionException();
@@ -40,6 +43,24 @@ namespace Animation {
 
         private class WrongOptionException : Exception {
             public WrongOptionException () : base("wybrano z³¹ opcje") { }
+        }  
+    }
+
+    public enum Options {
+            SNOW = 1,
+            CAT = 2
+    }
+
+    public static class OptionsExtensions {
+        public static string description (this Options option) {
+            switch (option) {
+            case Options.SNOW:
+                return "Pada œnieg";
+            case Options.CAT:
+                return "Kotek";
+            default:
+                return "";
+            }
         }
     }
 }

@@ -43,7 +43,7 @@ namespace Animation {
         private void restartFlake() {
             iterator = 0;
             currentFlake = rnd.Next(flakes.Count);
-            currentShiftX = rnd.Next(1, 10) * 10;
+            currentShiftX = rnd.Next(1, 14) * 10;
             currentShiftY = rnd.Next(1, 5);
         }
 
