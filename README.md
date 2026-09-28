@@ -1,0 +1,3 @@
+- Projekt końcowy na kursie INIT-2025-02 organizowanego przez KN Kredek i TK Games
+- Program pozwala na wybranie jednej z animacji w ASCII ART
+- W projekcie wykorzystane zostało programowanie obiektowe
